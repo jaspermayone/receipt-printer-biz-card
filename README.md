@@ -1,6 +1,8 @@
 # 🧾 Receipt Printer Biz Cards!
 
-![Final Product](https://github.com/user-attachments/assets/bd64a960-2d0b-4193-bc5f-cbd043b44ac4)
+<img src="https://github.com/user-attachments/assets/bd64a960-2d0b-4193-bc5f-cbd043b44ac4" width="400" alt="Final Product">
+
+*My card I made for the Socratica Symposium W25 event and is a sample of what the code can do*
 
 > [!NOTE]
 > Why carry boring paper cards when you can *print on demand* and watch people's faces light up?

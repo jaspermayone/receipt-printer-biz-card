@@ -46,7 +46,6 @@
       font-weight: bold;
       margin: 8px 0;
       padding-bottom: 5px;
-      border-bottom: 1px dashed #000;
       width: 90%;
     }
 
@@ -72,25 +71,27 @@
     .divider {
       width: 90%;
       margin: 5px auto;
-      border-top: 1px dotted #000;
-      height: 1px;
+      border-top: 2px dotted #000;
+      height: 2px;
     }
 
     .card-footer {
-      font-size: 12px;
+      font-size: 14px;
       margin-top: 8px;
-      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
     .printer-footer {
       margin-top: 20px;
-      font-size: 10px;
+      font-size: 12px;
       text-align: center;
-      border-top: 1px dashed #000;
+      border-top: 2px dashed #000;
       padding-top: 10px;
       width: 90%;
       word-wrap: break-word;
       white-space: normal;
+      font-weight: bold;
     }
 
     @media print {
@@ -112,12 +113,25 @@
         font-weight: bold !important;
       }
 
+      .card-footer {
+        font-size: 16px !important;
+        font-weight: 900 !important;
+        letter-spacing: 1px !important;
+      }
+
+      .printer-footer {
+        font-size: 14px !important;
+        font-weight: 900 !important;
+        border-top: 3px dashed #000 !important;
+      }
+
       img {
         filter: contrast(150%) brightness(90%);
       }
 
       .divider {
-        border-top: 2px dotted #000 !important;
+        border-top: 3px dotted #000 !important;
+        height: 3px !important;
       }
 
       .photo {
@@ -126,6 +140,19 @@
     }
   </style>
 </head>
+
+<script>
+  // Get the current date
+  const currentDate = new Date();
+  // Format the date as desired (e.g., "March 17, 2025")
+  const formattedDate = currentDate.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  });
+  // Set the content of the span
+  document.getElementById('current-date').textContent = formattedDate;
+</script>
 
 <body>
   <div class="container">
@@ -137,17 +164,19 @@
     <!-- Name - replace with your name -->
     <div class="name" id="name-placeholder">Your Name</div>
 
+    <div class="divider"></div>
+
     <!-- Website - replace with your website -->
     <div class="website" id="website-placeholder">www.yourwebsite.com</div>
 
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
 
     <!-- QR Code - will be generated based on your website -->
     <div class="qr-code" id="qr-code-placeholder">
       <p>QR Code Will Appear Here</p>
     </div>
 
-    <div class="card-footer" id="footer-text">Scan to connect</div>
+    <div class="card-footer" id="footer-text">Scan to visit site...</div>
 
     <div class="printer-footer" id="printer-footer">
       Printed by StarTSP100III receipt printer on <span id="current-date"></span> for <span id="event-name">your
